@@ -94,6 +94,13 @@ También es importante resaltar que tenemos una **terminal integrada** 🤖.
 
 ## Instalar VSCode
 
+- **Editores de código**: Enfocados a multiples lenguajes. Se pueden potencial con extensiones o plugins. Por lo general son gratuitos. Mejor este 😄. Tenemos VSCode, Atom, etc.
+- **IDE (entornos de desarrollo integrado)**: Enfocado a un solo lenguaje y seguimiento a un solo proyecto. Por lo general son de pago 💸. Tenemos Pycharm, Visual Studio, etc
+
+![editores-ide](https://imgur.com/PbMyQlK.png)
+
+[Instalacion de Visual Studio Code](https://code.visualstudio.com/download)
+
 ## Instalar WSL: usa Linux dentro de Windows
 
 ## Agregar extensiones para VSCode
