@@ -1,6 +1,6 @@
 <div align="center">
-    <h1>Curso Profesional de Python</h1>
-    <img src="https://imgur.com/ZFkZ0uX.png" width="">
+    <h1>Curso de Configuración Profesional de Entorno de Trabajo para Ciencia de Datos</h1>
+    <img src="https://imgur.com/LGxnCcO.png" width="20%">
 </div>
 
 ## Tabla de contenidos
