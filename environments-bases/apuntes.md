@@ -74,6 +74,22 @@ Con `ctrl + shift + p` abres la paleta de comandos, si escribes **shortcuts** o 
 
 ## Utilizar Deepnote
 
+[Deepnote](https://deepnote.com/) es un servicio en la nube basado en Jupyter Notebooks. No requiere configuración y tiene un trabajo a nivel de proyecto. Tiene colaboración en tiempo real, integración con múltiples Apps y tiene acceso a una terminal o línea de comandos integrada 😎.
+
+Tiene también variables de entorno y permite publicar proyectos (para construir portafolio). 🎉
+
+Podemos correr y agregar lo mismo que en Colab, pero además podemos subir archivos que se quedan siempre en el proyecto.
+
+Permite previsualizar los archivos CSV de manera muy elegante 😄.
+
+Parte de lo poderoso de Deepnote es que podemos **integrar** muchas cosas 🔥.
+
+No solo podemos agregar celdas de código y de texto, si no que en la opción de **Bloque** vienen muchos más tipos, como `input, chart, dataframe sql`, etc 🤯. Puede crear gráficas de manera automática sin código!
+
+Para acceder a los atajos de teclado usamos `Ctrl + i`.
+
+También es importante resaltar que tenemos una **terminal integrada** 🤖.
+
 # Configuración de VSCode
 
 ## Instalar VSCode
