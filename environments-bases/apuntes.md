@@ -7,6 +7,7 @@
 
 - [Introducción a las notebooks](#introducción-a-las-notebooks)
   - [¿En qué lugares programar para ciencia de datos?](#en-qué-lugares-programar-para-ciencia-de-datos)
+    - [Notebooks Vs Scripts](#notebooks-vs-scripts)
   - [Google Colab: primeros pasos](#google-colab-primeros-pasos)
   - [Google Colab: ciencia de datos](#google-colab-ciencia-de-datos)
   - [Utilizar Deepnote](#utilizar-deepnote)
@@ -30,6 +31,12 @@
 # Introducción a las notebooks
 
 ## ¿En qué lugares programar para ciencia de datos?
+
+Existen muchas plataformas para trabajar en Data Science, se recomiendo usar algún Sistema Operativo basado en UNIX usando Linux, MacOS o WSL en Windows, en editores estan VSCode, PyCharm, Deepnote, Google Colab, y el que usaremos Jupyter, todo basado en Notebooks que te permiten ir ejecutando trozos de código, en el cual puedes escribir pocas lineas de código probarlas, asegurarse de que estén bien y seguir adelante con otro trozo, allí también se pueden añadir código, ecuaciones, gráficas, texto enriquecido, etc.
+
+### Notebooks Vs Scripts
+
+Ambos son útiles, aunque los Scripts son mas directos, los Notebooks te permiten ver lo que haces, a medida de que lo haces, en estos puedes encargarte de experimentar y hacer el prototipado de tu script y finalmente pasarlo a un Script cuando ya este listo y estés seguro de que todo funciona como es esperado.
 
 ## Google Colab: primeros pasos
 
