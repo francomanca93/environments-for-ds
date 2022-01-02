@@ -56,6 +56,22 @@ Para llamar a la línea de comandos, debemos usar primero un signo de admiració
 
 ## Google Colab: ciencia de datos
 
+Podemos subir archivos a Colab para trabajar con ellos (también tienen datos de muestra) 🔢. Dándole click podemos previsualizar e incluso filtrar la tabla que hayamos subido.
+
+Podemos montar nuestro Google Drive en nuestro Notebook, con lo que podremos trabajar con datos que estén en nuestro Drive. 🤓 Es lo más recomendable ya que los archivos no se eliminan al terminar la sesión.
+
+Colab está enfocado a trabajar con Python (también puede usar otros lenguajes) y ya trae librerías de ciencia de datos precargadas como:
+
+- matplotlib: Generación de gráficos a partir de listas o arrays.
+- numpy: Cómputo científico para la manipulación de vectores.
+- pandas: Manipulación y análisis de datos de tablas y series temporales.
+- scipy: Herramientas y algoritmos matemáticos.
+- seaborn: Visualización de datos estadísticos.
+
+Google **Colaboratory** tiene code snipets, para que puedas utilizarlo y agilizar tu trabajo 🤯.
+
+Con `ctrl + shift + p` abres la paleta de comandos, si escribes **shortcuts** o atajos de teclado te mostrará una lista de todos los atajos que puedes ejecutar en Colab.
+
 ## Utilizar Deepnote
 
 # Configuración de VSCode
