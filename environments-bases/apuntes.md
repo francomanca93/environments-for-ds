@@ -14,6 +14,7 @@
 - [Configuración de VSCode](#configuración-de-vscode)
   - [Instalar VSCode](#instalar-vscode)
   - [Instalar WSL: usa Linux dentro de Windows](#instalar-wsl-usa-linux-dentro-de-windows)
+    - [Cambio de PASS en WSL (Olvido, perdida, etc)](#cambio-de-pass-en-wsl-olvido-perdida-etc)
   - [Agregar extensiones para VSCode](#agregar-extensiones-para-vscode)
   - [Uso de VSCode notebooks](#uso-de-vscode-notebooks)
 - [Entorno de desarrollo con Anaconda](#entorno-de-desarrollo-con-anaconda)
@@ -102,6 +103,16 @@ También es importante resaltar que tenemos una **terminal integrada** 🤖.
 [Instalacion de Visual Studio Code](https://code.visualstudio.com/download)
 
 ## Instalar WSL: usa Linux dentro de Windows
+
+[Instalar WSL](https://docs.microsoft.com/es-mx/windows/wsl/install)
+
+### Cambio de PASS en WSL (Olvido, perdida, etc)
+
+- Abrir el `cmd.exe`
+- Ejecutar el comando para entrar como root: `wsl -u root`
+- Cambian la password del usuario con `passwd <user>` (se los va a pedir dos veces)
+- Entran de vuelva a ubuntu y realizar alguna acción que requiera la pass, ejemplo actualizar los paquetes `sudo apt update`.
+
 
 ## Agregar extensiones para VSCode
 
