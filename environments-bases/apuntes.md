@@ -17,6 +17,7 @@
     - [Cambio de PASS en WSL (Olvido, perdida, etc)](#cambio-de-pass-en-wsl-olvido-perdida-etc)
   - [Agregar extensiones para VSCode](#agregar-extensiones-para-vscode)
   - [Uso de VSCode notebooks](#uso-de-vscode-notebooks)
+    - [Format Document](#format-document)
 - [Entorno de desarrollo con Anaconda](#entorno-de-desarrollo-con-anaconda)
   - [¿Qué son los ambientes virtuales?](#qué-son-los-ambientes-virtuales)
   - [Instalar Conda a través de la terminal](#instalar-conda-a-través-de-la-terminal)
@@ -113,10 +114,35 @@ También es importante resaltar que tenemos una **terminal integrada** 🤖.
 - Cambian la password del usuario con `passwd <user>` (se los va a pedir dos veces)
 - Entran de vuelva a ubuntu y realizar alguna acción que requiera la pass, ejemplo actualizar los paquetes `sudo apt update`.
 
-
 ## Agregar extensiones para VSCode
 
+- Hay muchas extensiones para VSCode que hacen trabajar con datos más cómodo. ☁️
+- Se pueden instalar todas las [extensiones](https://marketplace.visualstudio.com/VSCode) directamente desde VSCode 😄.
+- Es recomendable activar la **sincronización automática** en la nube, para que siempre puedas tener tu entorno de trabajo en cualquier lugar. Lo puedes contectar con tu cuenta de GitHub 🤖
+- Hay extension para [**Python**](https://marketplace.visualstudio.com/items?itemName=ms-python.python) que incluye muchas funcionalidades 🔥.
+- [**MagicPython**](https://marketplace.visualstudio.com/items?itemName=magicstack.MagicPython) sirve mucho para darle formato a Python y que sea más legible.
+- Con [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode) tendremos un asistente de desarrollo con AI
+- Las extensiones de [**Icon**](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) sirven para diferenciar tipos de archivos. 📁
+- [**Rainbow Brackets**](https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets) sirve para cambiar los colores de los paréntesis y no tener errores 🌈.
+- [**Remote Development**](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) te descarga múltiples extensiones que te sirven trabajar de manera remota. 🌎
+
+Con el comando `code --list-extensions` podremos ver un lista de las extensiones instaladas.
+
 ## Uso de VSCode notebooks
+
+- [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) son un nuevo estilo de Notebook, integrado dentro de VSCode 🤯.
+- Puedes abrir VSCode en una carpeta específica para ver todos los archivos dentro (y solo esos). Menos distracción que tener todo abierto con WSL. 😆
+- Podemos correr los archivos .py directamente en la terminal dando click en ▶️.
+- Con las extensiones que instalamos, podemos darle formato de manera automática a nuestro código 🐍.
+- Dentro de los Jupyter Notebook en VSCode podemos usar todas estas extensiones 💕. La extensión de los Notebooks es .ipynb. Podemos exportar los notebooks a texto plano!.
+
+### Format Document
+
+0. Seleccionamos el texto a formatear
+1. `CTRL + SHIFT + P` se nos abre el **Command Palette**.
+2. Buscamos **Format Document**
+3. Con la extension `autopep8` si la tenemos instalada, si no, la instalamos, podremos ordenar el código.
+4. Si tenemos librerias en orden distinto, podemos ordenarla alfabeticamente con **Sort Imports**, mejorando la legibilidad, codigo organizado y limpio.
 
 # Entorno de desarrollo con Anaconda
 
