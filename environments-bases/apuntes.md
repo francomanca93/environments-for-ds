@@ -22,11 +22,9 @@
   - [¿Qué son los ambientes virtuales?](#qué-son-los-ambientes-virtuales)
   - [Instalar Conda a través de la terminal](#instalar-conda-a-través-de-la-terminal)
   - [Conda: crear y actualizar ambientes](#conda-crear-y-actualizar-ambientes)
-  - [Conda: abrir VSCode Notebooks con tu ambiente creado](#conda-abrir-vscode-notebooks-con-tu-ambiente-creado)
   - [Conda: eliminar ambientes y librerías](#conda-eliminar-ambientes-y-librerías)
   - [Conda: comandos avanzados](#conda-comandos-avanzados)
   - [Acelerar la creación de ambientes virtuales con Mamba](#acelerar-la-creación-de-ambientes-virtuales-con-mamba)
-  - [Bonus: divide y vencerás](#bonus-divide-y-vencerás)
 - [¿Qué sigue con estas herramientas?](#qué-sigue-con-estas-herramientas)
   - [Cómo seguir tu camino en ciencia de datos](#cómo-seguir-tu-camino-en-ciencia-de-datos)
 
@@ -148,19 +146,118 @@ Con el comando `code --list-extensions` podremos ver un lista de las extensiones
 
 ## ¿Qué son los ambientes virtuales?
 
+- En la vida real, no vas a trabajar en un solo trabajo, si no en varios, y cada uno tendrá diferentes dependencias y requerimientos 🤔.
+- Cuando se actualizan o se cambia la configuración de las dependencias de un ambiente que tiene varios proyectos asociados puede haber errores 🛑.
+- Para poder separar proyectos, lo que hacemos es crear ambientes virtuales diferentes para cada proyecto. 🧠 Entonces la configuración y actualizaciones son para cada proyecto.
+
+Entonces los ambientes virtuales son:
+
+> "Proyectos que puede tener sus propias dependencias, independientemente de las dependencias que tengan los demás proyectos."
+Scott Robinson y la gente de Real Python
+
+En los [apuntes sobre entornos virtuales](https://github.com/francomanca93/python-intermedio/blob/main/apuntes.md#entorno-virtual) del curso de Python intermedio estudiamos porque y como funcionan los entorno virtuales con mas detalle.
+
 ## Instalar Conda a través de la terminal
+
+**Conda**: Programa diseñado para gestión de paquetes, dependencias y entorno para cualquier lenguaje: Python, R, Ruby, Lua, Scala, Java, JavaScript, etc. Además, es multiplataforma. 🖥️
+
+Para instalar conda debes instalar anaconda (versión completa, metapaquete de ciencia de datos) o miniconda (versión mínima). 🐍
+
+![miniconda](https://imgur.com/Evf7qSR.png)
+
+![anaconda](https://imgur.com/N3GCD8O.png)
+
+Para instalar conda:
+
+1. Descargamos desde [Anaconda | Individual Edition](https://www.anaconda.com/products/individual), o bien hacer `wget -0 anaconda.sh https://enlace-de-anaconda.sh`, donde `wget` es un comando para descargar archivos de internet desde temrinal, ejemplo:
+   - `wget -0 anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh`
+2. Para instalar hacemos `bash anaconda.sh`. 🐍
+3. Para abrir notebooks usamos `jupyter-notebook` o bien `jupyterlab`. Se nos creará un servidor local donde podremos acceder con el enlace que se nos provea desde la terminal, ejemplo: [localhost:8888](http://localhost:8888/). Los notebooks que creas ahí también los puedes abrir en VSCode.
+4. Para abrir VSCode en la carpeta en el que te encuentras, usas `code .`.
+
+[Conda vs. pip vs. virtualenv commands](https://docs.conda.io/projects/conda/en/latest/commands.html#conda-vs-pip-vs-virtualenv-commands)
 
 ## Conda: crear y actualizar ambientes
 
-## Conda: abrir VSCode Notebooks con tu ambiente creado
+- Crear ambiente. Si no hay se especifíca una versión, se instalará la última disponible.
+`$ conda create --name [nombre] [paquete]=[versión]`
+
+- Ver los paquetes(si no se especifican los paquetes, dará una lista de los ambientes virtuales):
+`$ conda list [paquete]`
+
+- Activar y desactivar los ambientes:
+`$ conda activate [nombre del ambiente]`
+`$ conda deactivate`
+
+- Actualizar paquetes:
+`$ conda update [paquete]`
+
+- Instalar un paquete específico:
+`$ conda install [paquete]=[versión]`
+
+- Clonar un ambiente:
+`$ conda --name [nuevo ambiente] --copy --clone [ambiente]`
 
 ## Conda: eliminar ambientes y librerías
 
+- Desinstalar un paquete:
+`$ conda remove [paquete]`
+
+- Eliminar un ambiente (el ambiente debe estar desactivado):
+
+`$ conda env remove --name [nombre de un ambiente]`
+
 ## Conda: comandos avanzados
+
+- Crear ambiente virtual
+`$ conda create --name [nombre_paquete] [paquetes]`
+
+- Instalar paquete que no esta disponible en el canal principal de conda:
+  - Vamos a https://anaconda.org/
+  - Buscamos el paquete que no podemos instalar:
+
+  ![search_packages](https://imgur.com/hj8SFnJ.png)
+
+  - Buscamos el nombre del canal y el nombre del paquete que queremos instalar:
+
+  ![search_packages-2](https://imgur.com/pTzD36b.png)
+
+  - Instalamos el paquete
+`$ conda install --channel [nombre_canal] [nombre_paquete]`
+Ejemplo: `$ conda install --channel conda-forge boltons`
+
+- Enlistar las revisiones del estado del ambiente virtual:
+`$ conda list --revision`
+
+- Volver al estado de una revisión anterior:
+`$ conda install --revision [nombre_revision]`
+
+- Crear una descripción del ambiente con todas sus dependencia para compartir:
+`$ conda env export  --no-builds`
+
+- Crear una descripción del ambiente solo con los paquetes agregados manualmente (tiene la ventaja que permite mayor compatibilidad multiplataforma, dado que conda se encarga de instalar las dependencias especificas para los paquetes en el SO):
+`$ conda env export --from-history`
+
+- Crear un archivo con la descripción(suele ser común en este tipo de archivos el formato .yml):
+`$ conda env export --from-history --file nombre_archivo.yml`
+
+- Instalar ambiente virtual desde archivo:
+`$ conda env create --file nombre_archivo.yml`
 
 ## Acelerar la creación de ambientes virtuales con Mamba
 
-## Bonus: divide y vencerás
+[Mamba](https://github.com/mamba-org/mamba) es una reimplementación de el manejador de paquetes Conda en C++. Cuando instalamos paquetes con mamba la velocidad aumenta mucho. Esto nos puede servir cuando tengamos de instalar una gran cantidad de paquetes, como por ejemplo en el archivo **environment.yml** o **requirements.txt**
+
+- Instalar MANBA
+`conda install --channel conda-forge mamba`
+`mamba help`
+`mamba --help`
+- Desinstalar ambiente
+`conda env remove --name py39`
+- Con MANBA
+`mamba env create --file environment.yaml`
+- Activar ambiente
+`conda activate py39`
 
 # ¿Qué sigue con estas herramientas?
 
